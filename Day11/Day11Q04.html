@@ -1,0 +1,46 @@
+
+<html>
+<head>
+    <title>Day of the Week</title>
+</head>
+<body>
+    <h1>Day of the Week</h1>
+    <label for="dayNumber">Enter a number: </label>
+    <input type="number" id="dayNumber" min="1" max="7" onchange="showDayOfWeek()">
+    <p id="dayResult"></p>
+
+    <script>
+        function showDayOfWeek() {
+            var dayNumber = parseInt(document.getElementById('dayNumber').value);
+            var dayResultElement = document.getElementById('dayResult');
+
+            switch (dayNumber) {
+                case 1:
+                    dayResultElement.textContent = "Monday";
+                    break;
+                case 2:
+                    dayResultElement.textContent = "Tuesday";
+                    break;
+                case 3:
+                    dayResultElement.textContent = "Wednesday";
+                    break;
+                case 4:
+                    dayResultElement.textContent = "Thursday";
+                    break;
+                case 5:
+                    dayResultElement.textContent = "Friday";
+                    break;
+                case 6:
+                    dayResultElement.textContent = "Saturday";
+                    break;
+                case 7:
+                    dayResultElement.textContent = "Sunday";
+                    break;
+                default:
+                    dayResultElement.textContent = "Invalid number";
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

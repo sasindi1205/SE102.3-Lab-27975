@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <button onclick="popUp()">Google</button>
+    <script>
+        function popUp()
+        {
+           var UserInput = window.confirm("Are you sure you want visit Google?");
+           if (UserInput)
+           {
+            window.location.href ="https://www.google.com/";
+           }
+           else {
+            window.alert("You decided to stay!");
+           }
+        }
+    </script>
+</body>
+</html>

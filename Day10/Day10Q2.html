@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Get Year of Birth from NIC</title>
+</head>
+<body>
+    <label for="nicInput">Enter NIC number:</label>
+    <input type="text" id="nicInput">
+    <button onclick="displayBirthYear()">Get Year of Birth</button>
+
+    <div id="result"></div>
+
+    <script>
+        function getBirthYearFromNIC(nicNumber) {
+           
+            const birthYearStr = nicNumber.substring(0, 4);
+
+           
+            const birthYear = parseInt(birthYearStr, 10);
+
+            return birthYear;
+        }
+
+        function displayBirthYear() {
+            const nicInput = document.getElementById("nicInput").value;
+            const birthYear = getBirthYearFromNIC(nicInput);
+
+            const resultDiv = document.getElementById("result");
+            resultDiv.textContent = "Year of Birth: " + birthYear;
+        }
+    </script>
+</body>
+</html>
